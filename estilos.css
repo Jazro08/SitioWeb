@@ -1,0 +1,135 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font: bold;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 3px 3px 10px rgb(61, 59, 59);
+    text-align: center;
+}
+
+h2 {font: bold 14px verdana, arial, sans-serif;
+}
+
+body {
+    text-align: center;
+    background-image: url(imagen/301738224_621066266385682_5937045247458247793_n.jpg);
+}
+
+#cuerpo {
+    width: 968px;
+    margin: 15px auto;
+    text-align: left;
+}
+
+#cabecera {
+    background: rgb(194, 92, 8);
+    border: 1px solid rgba(209, 105, 98, 0.705);
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.logo {
+    width: 200px;
+    transition: .3s;
+    clip-path: circle(43%);  
+    text-align: center;
+}
+
+.logo:hover {
+    clip-path: circle(41%);
+    scale: 1.02;
+    text-align: center;
+}
+
+#menu {
+    background: rgb(172, 49, 49);
+    padding: 5px 15px;
+}
+
+.nav-enlace {
+    display: inline-block;
+    background: rgb(145, 27, 11);
+    color: white;
+    margin: 3px;
+    padding: 10px 30px;
+    text-decoration: none;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius: 20px;
+    -moz-box-shadow:rgb(150, 150, 150) 2px 2px;
+    -webkit-box-shadow:rgb(150, 150, 150) 2px 2px;
+    box-shadow: rgb(150, 150, 150) 2px 2px;
+}
+
+.nav-enlace:hover {
+    background: rgb(168, 63, 49);
+    text-align: center;
+}
+
+#seccion {
+    float: left;
+    width: 660px;
+    margin: 20px;
+}
+
+.articulo {
+    background: rgba(150, 189, 206, 0.829);
+    border: rgb(150, 189, 206, 0.829);
+    padding: 20px;
+    margin-bottom: 15px;
+    -moz-border-radius:20px;
+    -webkit-border-radius:20px;
+    border-radius: 20px;
+    -moz-box-shadow:rgb(150, 150, 150) 5px 5px;
+    -webkit-box-shadow:rgb(150, 150, 150) 5px 5px;
+    box-shadow: rgb(150, 150, 150) 5px 5px;
+}
+
+
+#lateral {  
+    float: left;
+    width: 220px;
+    margin: 20px 0px;
+    padding: 20px;
+    background:rgb(221, 134, 63);
+    text-align: center;
+}
+
+.informacion {
+    width: 50px;
+    transition: .3s;
+    clip-path: circle(43%);
+    text-align: center;
+}
+
+.informacion:hover {
+    clip-path: circle(38px);
+    scale: 1.20;
+    text-align: center;
+}
+
+
+table {
+    text-shadow: goldenrod 0.5px 0.5px 0.5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+}
+
+span.lateral {
+    vertical-align: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+#pie {
+    clear: both;
+    text-align: center;
+    padding: 20px;
+    border-top: 5px rgb(20, 53, 26);
+}
+
