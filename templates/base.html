@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM EL FARO</title>
+    <link rel="shortcut icon" href="static/img/ICON CRMEF.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}"> <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>    
+<body>
+<header>
+    <nav>
+        <a href="{{ url_for('home') }}"></a>
+        <a href="#sobre-nosotros">Acerca de</a>
+        <a href="#portafolio">Portafolio</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    <section class="textos-header">
+        <h1>Actualiza tu equipo a un 100%</h1>
+        <h2>Con los mejores accesorios de computo</h2>
+    </section>
+    <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+            style="height: 100%; width: 100%;">
+            <path d="M-1.41,28.13 C203.43,185.03 371.61,-64.63 501.97,22.20 L501.97,155.42 L0.00,150.00 Z"
+                style="stroke: none; fill: #ffffff;"></path>
+        </svg></div>
+</header>
+<main>
+    <section id="sobre-nosotros" class="contenedor Sobre-nosotros">
+        <h2 class="titulo">¿A que nos dedicamos?</h2>
+        <div class="contenido">
+            <div class="slider-container">
+                <img src="static/img/CRMF.jpg" alt="mostrario 1" class="active">
+                <img src="static/img/OIP (2).jpeg" alt="mostrario 2">
+                <img src="static/img/OIP (3).jpeg" alt="mostrario 3">
+                <img src="static/img/R.jpeg" alt="mostrario 4">
+            </div>
+            <div class="contenido-textos">
+                <h3><span>1</span> Reparacion de impresoras y computadores </h3>
+                <p>Somos una empresa dedicada a la revision y reparacion de equipos de computo e impresoras averiadas o con algun tipo de problema.</p>
+                <h3><span>2</span> Venta de productos e insumos </h3>
+                <p>Proveemos impresoras, equipos de mesa y portatiles; asi como, productos necesarios y/o complementarios para el uso de los mismos.</p>
+            </div>
+        </div>
+        <script>
+            const images = document.querySelectorAll(".slider-container img");
+            let current = 0;
+
+            setInterval(() => {
+                images[current].classList.remove("active");
+                current = (current + 1) % images.length;
+                images[current].classList.add("active");
+            }, 2000);
+        </script>
+    </section>
+    <section id="portafolio" class="portafolio">
+        <div class="contenedor">
+            <h2 class="titulo">Portafolio</h2>
+            <div class="galeria-port">
+                <div class="imagen-port">
+                    <img src="static/img/IMPRESORA-Ecotank-L5590-1.jpg" alt="" id="animado">
+                    <div class="hover-galeria">
+                        <a target="_blank" href="impresoras-multifuncionales">
+                        <img src="static/img/Icono1.png" alt="Impresoras Multifuncionales">
+                        <p>Impresoras Multifuncionales</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/7156neUMypL.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/OIP (1).jpeg" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/Wireless-Mouse-Featured-Image_1891.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/Imagen-7_d1512805-08e0-4f48-b97d-ee1ee5b96474.webp" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/laptop.png" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/644p4o91vua21.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+                <div class="imagen-port">
+                    <img src="static/img/cpu-todo1.png" alt="">
+                    <div class="hover-galeria">
+                        <img src="static/img/Icono1.png" alt="">
+                        <p>Nuestro trabajo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="clientes contenedor">
+        <h2 class="titulo">Que dicen nuestros clientes</h2>
+        <div class="cards">
+            <div class="card">
+                <img src="static/img/Face 3.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Lorena Barreto</h4>
+                    <p> Hay mucha eficiencia en su trabajo, la atencion es excepcional y los resultados son garantizados. ¡Excelente!</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="static/img/71bc3b8b470073b54102c83604687a34.jpg" alt="">
+                <div class="contenido-texto-card">
+                    <h4>Javier Castro</h4>
+                    <p>Brindan una excelente atencion y le dieron solucion al problema de mi equipo que otros ya habian desauciado. ¡Me declaro cliente fiel! </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="servicios" class="about-services">
+        <div class="contenedor">
+            <h2 class="titulo">Nuestros servicios</h2>
+            <div class="servicio-cont">
+                <div class="servicio-ind">
+                    <img src="static/img/OIP.jpeg" alt="">
+                    <h3>Asistencia tecnica remota y personalizada a empresas</h3>
+                    <p>Contamos con tecnicos especializados en resolver todo tipo de problema de conectividad</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="static/img/1500x844-consultoria-ahorro.jpg" alt="">
+                    <h3>Cotizaciones y asesoramiento</h3>
+                    <p>Te ofrecemos el mejor asesoramiento para que compres el producto que mas se acomode a tus necesidades</p>
+                </div>
+                <div class="servicio-ind">
+                    <img src="static/img/quality-assurance-concept-operating-with-the-quality-assurance-guarantee-standards-iso-certification-and-standardization-notion-as-proof-of-top-service-photo.jpg" alt="">
+                    <h3>Calidad y garantia</h3>
+                    <p>Todos nuestros productos y servicios son totalmenten garantizados generando la confianza del cliente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <section id="contacto">
+    <div class="contenedor-footer">
+        <div class="content-foo">
+            <h4>Contacto</h4>
+            <p>314 4114864</p>
+        </div>
+        <div class="content-foo">
+            <h4>Email</h4>
+            <p>crmelfaro@gmail.com</p>
+        </div>
+        <div class="content-foo">
+            <h4>Direccion</h4>
+            <p>Cll 15 No 17-45, local 1</p>
+        </div>
+    </div>
+    <h2 class="titulo-final">&copy; Crm El faro| Jazmin Rodriguez</h2>
+    </section>
+</footer>
+ </body>
+</html>

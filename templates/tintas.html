@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=DEVICE-WIDTH, initial-scale-1.0"> 
+    <tittle>Mi primer pagina web</tittle>
+</head>    
+<body>
+    <h1> Hola!! {{ nombre }}!!! como estas? </h1>
+    
+<h1>Servicios Disponibles:</h1> 
+<ul> 
+    {% for servicio in servicios %} 
+    <li>{{ servicio }}</li> 
+    {% endfor %} 
+</ul> 
+
+<p>Fecha y hora actual: {{ ahora }}</p> 
+

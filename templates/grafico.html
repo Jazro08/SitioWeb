@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Nivel de Satisfaccion</title>
+</head>
+<body>
+    <header>
+        <nav>
+        <a href="{{ url_for('opinion_clientes') }}"></a></nav>
+    <article class="articulo">
+        <h1>Satisfaccion de los clientes</h1>
+        <canvas id="chart4" class="chart4"></canvas>
+    </article>
+    </header>
+    <script>
+        const labels = {{ labels | tojson }};
+        const usuariosA = {{ usuarios_a | tojson }};
+        const usuariosB = {{ usuarios_b | tojson }};
+        const usuariosC = {{ usuarios_c | tojson }};
+        const usuariosD = {{ usuarios_d | tojson }};
+        const usuariosE = {{ usuarios_e | tojson }};
+        const miGrafico = new Chart(document.getElementById("chart4"), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                    label: 'Usuarios A',
+                    data: usuariosA,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Usuarios B',
+                    data: usuariosB,
+                    backgroundColor: 'rgba(45, 255, 152, 0.1)',
+                    borderColor: 'rgba(45, 255, 152, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Usuarios C',
+                    data: usuariosC,
+                    backgroundColor: 'rgba(25, 221, 251, 0.1)',
+                    borderColor: 'rgba(25, 221, 251, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Usuarios D',
+                    data: usuariosD,
+                    backgroundColor: 'rgba(65, 184, 235, 0.2)',
+                    borderColor: 'rgba(65, 184, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Usuarios E',
+                    data: usuariosE,
+                    backgroundColor: 'rgba(33, 245, 162, 0.1)',
+                    borderColor: 'rgba(33, 245, 162, 1)',
+                    fill: false
+                }
+            ]
+        },
+        options: { responsive: false }
+        });
+    </script>
+</body>
+</html>

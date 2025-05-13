@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=DEVICE-WIDTH, initial-scale-1.0"> 
+    <tittle>Crm El Faro</tittle>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>    
+<body>
+    <div id="cuerpo">
+    <header id="cabecera"><img class="logo" src="{{ url_for('static', filename='imagen/301738224_621066266385682_5937045247458247793_n.jpg') }}"><h1>C.R.M EL FARO S.A.S</h1></header>
+    <nav id="menu">
+        <a href="{{ url_for ('proyecto') }}">ir a proyecto</a>
+        <a href="#" class="nav-enlace">inicio</a>
+        <a href="#productos" class="nav-enlace">productos</a>
+        <a href="{{ url_for ('pagina2') }}" class="nav-enlace">servicios</a>
+        <a href="#" class="nav-enlace">promociones</a>
+    </nav> <!--este es el menu principal-->
+    <section id="seccion">
+        <article class="articulo"><h2>Reparacion de impresoras y computadores</h2><p>Somos una empresa dedicada a la revision y reparacion de equipos de computo e impresoras averiadas o con algun tipo de problema.</p></article>
+        <article class="articulo">
+            <h1>IMPRESORAS MULTIFUNCIONALES</h1>
+            <h2>EPSON L5590</h2>
+            <img src="static/imagen/IMPRESORA-Ecotank-L5590-1.jpg.webp" with="400px" high="400px">
+        </article>
+        <article class="articulo">
+            <h1>Grafico Interactivo</h1>
+            <canvas id="chart4" style="width:500px; height:300px;"></canvas>
+        </article>
+        <article id="productos" class="articulo"><h2>Venta de productos e insumos</h2><p>Proveemos impresoras, equipos de mesa y portatiles; asi como, productos necesarios y/o complementarios para el uso de los mismos.</p></article>
+    </section>
+    <aside id="lateral"><h3>PARA MAS INFORMACION PRESIONE EL BOTON </h3></aside>
+    <form name="formulario"><img class="informacion" src="imagen/botón-redondo-anaranjado-especial-del-icono-de-la-información-105876172.webp">
+        <a href="https://www.google.com/maps/place/C.R.M.+El+Faro+S.A.S./@3.9876388,-73.7608526,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3e394d6ada6971:0x17b2a6f17238ea5b!8m2!3d3.9876388!4d-73.7608526!16s%2Fg%2F11cr_0kgvr?hl=es-MX&entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D"></a>
+        <h2>Formulario Web</h2>
+        <tableborder="0">
+            <tr><td>Nombre:</td><td><input type="text" name="txtNombre" required></td></tr>
+            <tr><td>Correo:</td><td><input type="email" name="miEmail" placeholder="ingrese email"/></td></tr>
+            <tr><td>Estrato:</td><td><input type="number" name="numEst" min="1" max="6" step="1"/></td></tr>
+            <tr><td>Fecha:</td><td><input type="date" name="fecha" required></td></tr>
+            <tr><td><input type="submit" name="btnEnviar" value="Enviar"/></td></tr>
+        </table>
+    </form>
+    <footer id="pie"><h5>Calle 15 17-45, local 1; 314 4114864</h5></footer>
+    <script>
+        const labels = {{ labels | tojson }};
+        const empresaA = {{ empresa_a | tojson }};
+        const empresaB = {{ empresa_b | tojson }};
+        new Chart(document.getElementById("chart4"), {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [
+                    {
+                    label: 'Empresa A',
+                    data: empresaA,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    fill: false
+                },
+                {
+                    label: 'Empresa B',
+                    data: empresaB,
+                    backgroundColor: 'rgba(45, 258, 152, 0.1)',
+                    borderColor: 'rgba(45, 258, 152, 2)',
+                    fill: false
+                }
+            ]
+        },
+        options: { responsive: false }
+        });
+    </script>
+</body>
+</html>
